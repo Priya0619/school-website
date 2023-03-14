@@ -16,12 +16,17 @@ code {
 	margin: 0;
 	padding: 0;
 }
-
+.main-container-wrapper{
+	background: #F7F7F7;
+	width: 100%;
+}
 .main-container{
-	margin: 0px 80px;
+	background: #ffffff;
+	width: 80%;
+	margin: auto;
 }
 .container{
-	margin: 10px 30px;
+	padding: 10px 30px;
     display: flex;
 	justify-content: space-between;
 
@@ -35,7 +40,7 @@ code {
 }
 
 .background {
-	background: rgb(0, 0, 255);
+	background: #2650AD;
 	background-size: cover;
 	background-blend-mode: darken;
 
@@ -135,11 +140,9 @@ code {
 }
 
 .contact{
-
-	padding: 15px 8px;
+	padding: 30px 8px;
 	max-width: 100%;
-	background-color: gray;
-	height: 480px;
+	background-color: #CDDAE5;
 }
 
 #form{
@@ -147,21 +150,25 @@ code {
 	text-align: center;
 }
 
-
-
-.input-text{
-	width: 240px;
-	display: inline-block;
-	text-align: left;
+.form-div{
+	width: 50%;
+	margin: 10px auto;
 }
-
-
+.form-item{
+	width: 100%;
+	display: flex;
+}
+.input-text{
+	width: 35%;
+	text-align: left;
+	padding-top: 10px;
+}
 .form-input{
 	margin: 8px 0;
-	padding: 12px 20px;
-	width:35%;
+	padding: 7px 20px;
+	width: 75%;
     font-size: 18px;
-    border: 2px solid grey;
+    border: 1px solid #707070;
     border-radius: 6px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -169,17 +176,17 @@ code {
 .btn{
 	padding: 12px 24px;
 	border-radius: 4px;
-    background: rgb(11, 11, 124);
+    background: #2650AD;
     color: white;
     cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
+	border: none;
 }
 
 .btn-move{
-	display: flex;
-	margin-left: 540px;
-	margin-bottom: 18px;
+	margin-left: 30%;
+	margin-top: 8px;
 }
 .footer {
 	font-size: 18px;
