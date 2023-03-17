@@ -67,6 +67,11 @@ code {
 	color: white;
 }
 
+.link {
+	font-size: 20px;
+	text-decoration: none;
+	  color: white;
+  }
 .nav-list li a:hover {
 	color: grey;
 }
@@ -188,6 +193,17 @@ code {
 	margin-left: 30%;
 	margin-top: 8px;
 }
+
+.about-content{
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+font-style: normal;
+text-align: center;
+color: #000000;
+margin: 47px 115px;
+}
+
 .footer {
 	font-size: 18px;
 	text-align: center;
