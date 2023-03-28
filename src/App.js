@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Header from './components/Header';
 import Content from './components/Content';
 import Contact from './components/Contact';
@@ -9,22 +8,25 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 const App = () => {
     return (
-       <>
-        <Router>
-            <Header/>
-            <Routes>
-                <Route exact path='/' element={
-                    <div>
-                        <Content/>
-                        <Contact/>
-                    </div>
-                }/>
-                <Route exact path='/contact' element={<Contact/>} />
-                <Route exact path='/about' element={<About/>} />
-            </Routes>
-            <Footer/>
-        </Router>
-       </>
+        <>
+
+                <Router>
+                    <Header />
+                    <Routes>
+                        <Route exact path='/' element={
+                            <div>
+                                <Content />
+                                <Contact />
+                            </div>
+                        } />
+                        <Route exact path='/contact' element={
+                            <Contact />} />
+                        <Route exact path='/about' element={<About />} />
+                    </Routes>
+                    <Footer />
+                </Router>
+
+        </>
 
 
     )

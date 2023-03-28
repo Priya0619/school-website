@@ -1,17 +1,22 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 
+
+
 const Contact = () => {
+
 
     const intialValues = { fullname: "", address: "", contact: "", email: "", message: "" };
     const [formValues, setFormValues] = useState(intialValues);
+    const [formData, setFormData] = useState();
     const [formErrors, setFormErrors] = useState({});
+
 
     const handleChange = (e) => {
         console.log(e.target);
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value });
-        console.log(formValues);
+        // console.log(formValues);
     }
 
     useEffect(() => {
@@ -19,11 +24,20 @@ const Contact = () => {
 
     }, [formErrors])
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues));
         setFormValues(intialValues);
+        setFormData(`${formValues.fullname}` && `${formValues.address}` && `${formValues.contact}` && `${formValues.email}` ? <div className='center'>
+            <p>Name: {formValues.fullname}</p>
+            <p>Address: {formValues.address}</p>
+            <p>Contact Number:{formValues.contact}</p>
+            <p>Email: {formValues.email}</p>
+        </div> : " ")
     }
+
+
     const validate = (values) => {
         const errors = {};
 
@@ -36,13 +50,16 @@ const Contact = () => {
         }
         if (!values.contact) {
             errors.contact = "Contact Number is required!";
-        } 
+        }
         if (!values.email) {
             errors.email = "Email is required!";
         }
 
         return errors;
+
     }
+
+
     return (
         <div className='main-container'>
 
@@ -87,16 +104,21 @@ const Contact = () => {
                     <div className="form-item">
                         <label className='input-text' htmlFor="message"> Message</label>
                         <textarea className="form-input" name="message" id="message"
-                            value={formValues.message}
+                            value={formValues.message}  onChange={handleChange}
                         ></textarea>
                     </div>
                     <div className="form-item">
                         <button className="btn btn-move" type="submit">Submit</button>
+
                     </div>
                 </form>
+                <div>
+                    <p >{formData}</p>
+
+                </div>
             </section>
         </div>
     )
 }
 
-export default Contact
+export default Contact;
